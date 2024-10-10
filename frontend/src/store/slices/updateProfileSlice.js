@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const backendURL = import.meta.env.VITE_API_URL;
+
 const updateProfileSlice = createSlice({
   name: "updateProfile",
   initialState: {
@@ -47,7 +49,7 @@ export const updateProfile = (data) => async (dispatch) => {
   dispatch(updateProfileSlice.actions.updateProfileRequest());
   try {
     const response = await axios.put(
-      " import.meta.env.VITE_API_URL/api/v1/user/update/profile",
+      " ${backendURL}/api/v1/user/update/profile",
       data,
       {
         withCredentials: true,
@@ -67,7 +69,7 @@ export const updatePassword = (data) => async (dispatch) => {
   dispatch(updateProfileSlice.actions.updatePasswordRequest());
   try {
     const response = await axios.put(
-      " import.meta.env.VITE_API_URL/api/v1/user/update/password",
+      " ${backendURL}/api/v1/user/update/password",
       data,
       {
         withCredentials: true,
