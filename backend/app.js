@@ -1,5 +1,5 @@
 import express from "express";
-import { config } from "dotenv";
+import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { connection } from "./database/connection.js";
@@ -9,9 +9,9 @@ import userRouter from "./routes/userRouter.js";
 import jobRouter from "./routes/jobRouter.js";
 import applicationRouter from "./routes/applicationRouter.js";
 import { newsLetterCron } from "./automation/newsLetterCron.js";
+dotenv.config();
 
 const app = express();
-config({ path: "./config/config.env" });
 
 app.use(
   cors({
