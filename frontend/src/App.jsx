@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Jobs from "./pages/Jobs";
 import Login from "./pages/Login";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/Notfound";
 import PostApplication from "./pages/PostApplication";
 import Register from "./pages/Register";
 import { ToastContainer } from "react-toastify";
